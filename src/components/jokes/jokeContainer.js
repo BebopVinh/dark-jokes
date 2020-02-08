@@ -3,10 +3,12 @@ import Card from "./card"
 import JokeButton from "./jokeButton"
 
 const JokeContainer = () => {
-  const [joke, setJoke] = useState("")
+  const [joke, setJoke] = useState(null)
+
   return (
     <>
-      {!(joke === "") ? <Card joke={joke} /> : "Not funny yet..."}
+      {/* {joke ? <Card {...joke} /> : <p>"Not funny yet..."</p>} */}
+      <Card joke={joke} />
       <JokeButton setJoke={setJoke} />
     </>
   )

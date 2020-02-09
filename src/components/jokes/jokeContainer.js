@@ -7,9 +7,15 @@ const JokeContainer = () => {
 
   return (
     <>
-      {/* {joke ? <Card {...joke} /> : <p>"Not funny yet..."</p>} */}
-      <Card joke={joke} />
-      <JokeButton setJoke={setJoke} />
+      {joke ? (
+        <Card joke={joke} setJoke={setJoke} />
+      ) : (
+        <div>
+          <p>Not funny yet...</p>
+          <br />
+          <JokeButton setJoke={setJoke} />
+        </div>
+      )}
     </>
   )
 }
